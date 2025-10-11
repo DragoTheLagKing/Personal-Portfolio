@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="background.css">
-    <link rel="stylesheet" href="menus.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="background.css">
+  <link rel="stylesheet" href="menus.css">
 </head>
 <body>
-    <div class="menu-container">
-        <div class="Lmenu">
-            <div class="ULmenu">
-                    <div class="picture"></div>
-                    <div class="info">
-                        <p class="name">Loay Farghawi</p>
-                        <p class="desc">A 17 year old <span id="word"></span> front-end Web Developer. <br> Originally from Palestine.</p>
-                    </div>
-                </div>
-            <div class="BLmenu"></div>
+  <div class="menu-container fade-section">
+
+    <div class="Lmenu">
+      <div class="ULmenu fade-section">
+        <div class="pInfo-container">
+          <p class="i">i</p>
+          <p class="iLabel">About Me</p>
         </div>
-        <div class="Mmenu"></div>
-        <div class="Rmenu"></div>
+        <div class="picture"></div>
+        <div class="info">
+          <p class="name">Hey there! I'm Loay Farghawi</p>
+          <p class="desc">
+            A 17 year old <span id="word"></span> front-end Web Developer. <br>
+            Originally from Palestine. <br>
+            12th grade student.
+          </p>
+        </div>
+      </div>
+
+      <div class="BLmenu fade-section">
+        <p class="title">Stacks:</p>
+        <div class="button-container">
+          <img class="html-button" src="icons/html-icon.png" alt="HTML">
+          <img class="css-button" src="icons/css-icon.png" alt="CSS">
+          <img class="js-button" src="icons/js-icon.png" alt="JavaScript">
+        </div>
+      </div>
     </div>
 
-
-    <div class="background-container">
-        <div class="background"></div>
+    <div class="Mmenu fade-section">
+      <p class="title">Projects:</p>
+      <div class="project">Youtube</div>
+      <div class="project">Aesthetic menu</div>
+      <div class="project">More soon..</div>
     </div>
-    <script src="scripts.js"></script>
+
+    <div class="Rmenu fade-section">
+      <p class="title">Contact Me:</p>
+      <div class="contact-item">
+        <img src="icons/Gmail-icon.png" class="gmail-icon">
+        Gmail: farghawiloay99@gmail.com</div>
+    </div>
+  </div>
+      <div class="testdiv">W</div>
+
+  <div class="background-container">
+    <div class="background"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="scroll-effects.js"></script>
 </body>
 </html>
