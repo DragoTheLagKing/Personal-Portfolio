@@ -1,0 +1,310 @@
+/* ======== Menu Container ======== */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 95%;
+  min-height: 80vh;
+  padding: 30px;
+  margin: 40px auto 0;
+  color: #fff9c4;
+  background: rgba(48, 48, 0, 0.25);
+  border: 1px solid rgba(255, 255, 150, 0.25);
+  border-radius: 30px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45),
+              0 0 12px rgba(255, 255, 150, 0.08);
+  overflow: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ======== Left Menus (UL & BL) ======== */
+.Lmenu {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.ULmenu,
+.BLmenu {
+  flex: 1;
+  border-radius: 25px;
+  background: rgba(25, 20, 0, 0.25);
+  border: 1px solid rgba(255, 255, 150, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+              0 0 10px rgba(255, 255, 150, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ULmenu:hover,
+.BLmenu:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25),
+              0 0 25px rgba(255, 255, 150, 0.15);
+}
+
+/* ======== ULmenu content ======== */
+.ULmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  padding: 25px;
+  text-align: center;
+}
+
+/* About Me Info */
+.pInfo-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.i {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  font-weight: 900;
+  border-radius: 50%;
+  background-color: rgba(255, 235, 59, 0.4);
+  border: 1px solid rgba(255, 255, 150, 0.25);
+}
+
+.iLabel {
+  margin-left: 10px;
+  font-weight: 900;
+  color: #fff9c4;
+}
+
+.picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(255, 235, 59, 0.3);
+  border: 2px solid rgba(255, 255, 150, 0.25);
+  margin-top: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.name {
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.desc {
+  font-size: 13.5px;
+  color: #fffde7;
+  line-height: 1.5;
+}
+
+#word {
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+/* ======== BLmenu content (Stacks) ======== */
+.BLmenu {
+  text-align: center;
+  padding: 18px;
+}
+
+.title {
+  font-size: 15.5px;
+  font-weight: 900;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 235, 59, 0.25);
+  text-align: center;
+  color: #fffde7;
+}
+
+/* Tech stack buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.html-button, .css-button, .js-button {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 235, 59, 0.3);
+  filter: brightness(130%);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.button-container > *:hover {
+  transform: scale(1.08);
+  filter: brightness(150%);
+}
+
+
+/* ToolTips */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(0,0,0,0.85);
+  color: #d5ca62;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+/* ======== Middle & Right Menus (Projects & Contact) ======== */
+.Mmenu,
+.Rmenu {
+  flex: 1;
+  border-radius: 25px;
+  background: rgba(25, 20, 0, 0.25);
+  border: 1px solid rgba(255, 255, 150, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+              0 0 10px rgba(255, 255, 150, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.Mmenu:hover,
+.Rmenu:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25),
+              0 0 25px rgba(255, 255, 150, 0.15);
+}
+
+/* Projects styling */
+.project {
+  background: rgba(255, 235, 59, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 150, 0.3);
+  padding: 18px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #d5ca62;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 35px rgba(255, 235, 59, 0.15);
+}
+
+.project:active {
+  transform: scale(0.97);
+  box-shadow: 0 6px 15px rgba(255, 235, 59, 0.25);
+}
+
+/* Contact items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 235, 59, 0.2);
+  border: 1px solid rgba(255, 255, 150, 0.3);
+  padding: 12px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(255, 235, 59, 0.25);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255, 235, 59, 0.3);
+  filter: brightness(130%);
+  transition: transform 0.25s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.08);
+}
+
+/* ======== Scroll fade animation ======== */
+.fade-section {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: auto;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .ULmenu,
+  .BLmenu,
+  .Mmenu,
+  .Rmenu {
+    width: 100%;
+  }
+
+  .picture { width: 100px; height: 100px; }
+  .name { font-size: 1rem; }
+  .desc { font-size: 12.5px; }
+  .button-container > * { width: 55px; height: 55px; }
+}
