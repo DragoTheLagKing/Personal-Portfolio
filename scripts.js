@@ -1,3 +1,4 @@
+
 const words = [
   "driven",
   "dedicated",
@@ -57,3 +58,5 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".fade-section").forEach(section => {
   observer.observe(section);
 });
+
+
