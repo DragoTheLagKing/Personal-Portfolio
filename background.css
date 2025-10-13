@@ -1,18 +1,21 @@
-
-
-
-body {
-user-select: none;
-  margin: 0;
-  height: 100vh;
-  display: flex;
+html {
+  overflow-y: scroll; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
   align-items: center;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   font-family: Arial, sans-serif;
-  overflow: hidden;
   background: radial-gradient(ellipse at bottom, rgb(45, 48, 0) 10%, black 90%);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .background-container {
   position: fixed;
@@ -21,7 +24,7 @@ user-select: none;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: -1;
+  z-index: -1; 
 }
 
 .background {
@@ -37,10 +40,8 @@ user-select: none;
   animation: float 20s linear infinite;
 }
 
-
 @keyframes float {
   0% { background-position: 0 0; }
   50% { background-position: -50px 50px; }
   100% { background-position: 0 0; }
 }
-
