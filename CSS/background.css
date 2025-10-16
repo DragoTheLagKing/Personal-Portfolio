@@ -10,7 +10,8 @@ html {
   width: 100%;
   justify-content: center;
   font-family: Arial, sans-serif;
-  background: radial-gradient(ellipse at bottom, rgb(45, 48, 0) 10%, black 90%);
+  background-color: black;
+  padding-bottom: 700px;
 }
 
 body::-webkit-scrollbar {
